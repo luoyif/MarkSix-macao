@@ -97,8 +97,8 @@ else:
         # 选择数据范围
         st.sidebar.header("选择数据范围")
         latest_period = len(df)
-        start_row = st.sidebar.number_input("起始行（最新一期）", min_value=1, max_value=latest_period, value=1)
-        end_row = st.sidebar.number_input("结束行（最老一期）", min_value=1, max_value=latest_period, value=latest_period)
+        start_row = st.sidebar.number_input("起始行（最老一期）", min_value=1, max_value=latest_period, value=1)
+        end_row = st.sidebar.number_input("结束行（最新一期）", min_value=1, max_value=latest_period, value=latest_period)
 
         # 将起始行和结束行转换为数据索引
         start_index = latest_period - start_row
